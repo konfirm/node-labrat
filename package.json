@@ -1,0 +1,25 @@
+{
+  "name": "@konfirm/labrat",
+  "version": "1.0.0",
+  "description": "Convenience wrapper to globalize Hapi lab and code (BDD syntax)",
+  "main": "source/labrat.js",
+  "scripts": {
+    "test": "lab -clr",
+    "test-coverage-html": "lab -clr html -o report.html"
+  },
+  "bin": {
+    "lab": "./bin/lab.js"
+  },
+  "keywords": [
+    "unit test",
+    "lab",
+    "code",
+    "bootstrap"
+  ],
+  "author": "Rogier Spieker <rogier+labrat@konfirm.eu>",
+  "license": "MIT",
+  "dependencies": {
+    "code": "^4.1.0",
+    "lab": "^14.2.2"
+  }
+}
