@@ -7,6 +7,13 @@
     "test": "lab -clr",
     "test-coverage-html": "lab -clr html -o report.html"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konfirm/node-labrat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/konfirm/node-labrat/issues"
+  },
   "bin": {
     "lab": "./bin/lab.js"
   },
