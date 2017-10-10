@@ -9,22 +9,6 @@ Note that labrat is a so-called scoped npm module, hence you will need to specif
 $ npm install --save-dev @konfirm/labrat
 ```
 
-## Running the tests
-LabRat installs the `lab` executable, which can be called from the project (or globally if you still install npm modules globally). This leaves the [`lab` command-line](https://github.com/hapijs/lab#command-line) usage unchanged.
-
-Running lab with a code coverage report following the tests:
-
-```
-$ lab -c
-```
-
-Running lab with a nice HTML based report:
-
-```
-$ lab -cr html -o report.html
-```
-
-
 ## Usage
 LabRat is intended to make the [lab](https://github.com/hapijs/lab) bootstrap slightly more convenient, to use the bootstrap create a file `test/index.spec.js` with the following contents:
 

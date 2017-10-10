@@ -4,8 +4,8 @@
   "description": "Convenience wrapper to globalize Hapi lab and code (BDD syntax)",
   "main": "source/labrat.js",
   "scripts": {
-    "test": "lab -clr",
-    "test-coverage-html": "lab -clr html -o report.html"
+    "test": "./node_modules/.bin/labrat -clr",
+    "test-coverage-html": "./node_modules/.bin/labrat -clr html -o report.html"
   },
   "repository": {
     "type": "git",
@@ -14,19 +14,16 @@
   "bugs": {
     "url": "https://github.com/konfirm/node-labrat/issues"
   },
-  "bin": {
-    "lab": "./bin/lab.js"
-  },
   "keywords": [
     "unit test",
     "lab",
     "code",
     "bootstrap"
   ],
-  "author": "Rogier Spieker <rogier+labrat@konfirm.eu>",
+  "author": "Rogier Spieker",
   "license": "MIT",
   "dependencies": {
-    "code": "^4.1.0",
+    "code": "^5.1.0",
     "lab": "^14.2.2"
   }
 }
