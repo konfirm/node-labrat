@@ -1,6 +1,7 @@
 # LabRat
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/45a631ca213a4bbbb277940ec597a081)](https://www.codacy.com/app/rogier/node-labrat?utm_source=github.com&utm_medium=referral&utm_content=konfirm/node-labrat&utm_campaign=badger)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/419c821984124e2190e03657f86391ab)](https://www.codacy.com/app/konfirm/node-labrat?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=konfirm/node-labrat&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/konfirm/node-labrat.svg?branch=master)](https://travis-ci.org/konfirm/node-labrat)
 
 A simple wrapper around Hapi's [lab](https://github.com/hapijs/lab) and [code](https://github.com/hapijs/code) modules to allow for easy BDD-style test bootstrapping.
 It globally exposes several BDD-style methods from both [lab](https://github.com/hapijs/lab) and [code](https://github.com/hapijs/code) wich are cleaned up after the tests, this prevents lab from reporting (the defined globals) as possible leaks.
