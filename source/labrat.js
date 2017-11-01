@@ -94,10 +94,8 @@ const labrat = new LabRat()
 
 //  make lab, code and labrat globally available
 labrat.globalize({ lab, code, labrat }, 'lab', 'code', 'labrat');
-//  expose the it, describe, before(Each) and after(Each) methods from lab globally
-labrat.globalize(lab, 'it', 'describe', 'before', 'beforeEach', 'after', 'afterEach');
-//  expose the expect method from code globally
-labrat.globalize(code, 'expect');
+//  expose the expect, it, describe, before(Each) and after(Each) methods from lab globally
+labrat.globalize(lab, 'expect', 'it', 'describe', 'before', 'beforeEach', 'after', 'afterEach');
 //  expose the source methos from labrat globally
 labrat.globalize({
 	source: labrat.source.bind(labrat),
