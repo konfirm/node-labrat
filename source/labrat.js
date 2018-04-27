@@ -22,12 +22,11 @@ class LabRat {
 			monkey: []
 		})
 
-		//  register the clean up of all the monkey-patched global values
-		lab.after((done) => {
+		lab.after(() => new Promise((resolve) => {
 			map.get(this).monkey.forEach((clean) => clean());
 
-			done();
-		});
+			resolve();
+		}));
 	}
 
 	/**
@@ -88,17 +87,24 @@ class LabRat {
 
 		return require(`${path}/${module}`);
 	}
+
+	testRunner(title, test) {
+		lab.it(title, () => new Promise((resolve) => test(resolve)));
+	}
 }
 
 const labrat = new LabRat()
 
 //  make lab, code and labrat globally available
 labrat.globalize({ lab, code, labrat }, 'lab', 'code', 'labrat');
-//  expose the expect, it, describe, before(Each) and after(Each) methods from lab globally
-labrat.globalize(lab, 'expect', 'it', 'describe', 'before', 'beforeEach', 'after', 'afterEach');
-//  expose the source methos from labrat globally
+//  expose the describe, before(Each) and after(Each) methods from lab globally
+labrat.globalize(lab, 'describe', 'before', 'beforeEach', 'after', 'afterEach');
+//  expose the expect from code globally
+labrat.globalize(code, 'expect');
+//  expose the source and it methods from labrat globally
 labrat.globalize({
 	source: labrat.source.bind(labrat),
-}, 'source');
+	it: labrat.testRunner.bind(labrat),
+}, 'source', 'it');
 
 module.exports = labrat;

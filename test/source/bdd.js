@@ -4,13 +4,13 @@
 describe('Exposes BDD syntax', () => {
 	describe('from "lab"', () => {
 		it('it', (next) => {
-			expect(it).to.equal(lab.it);
-			expect(global.it).to.equal(lab.it);
+			expect(it).not.to.equal(lab.it);
+			expect(global.it).not.to.equal(lab.it);
 
 			next();
 		});
 
-		it('it', (next) => {
+		it('describe', (next) => {
 			expect(describe).to.equal(lab.describe);
 			expect(global.describe).to.equal(lab.describe);
 
