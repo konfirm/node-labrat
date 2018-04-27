@@ -23,6 +23,6 @@
   "author": "Rogier Spieker",
   "license": "MIT",
   "dependencies": {
-    "lab": "^14.3.1"
+    "lab": "^14.3.4"
   }
 }
