@@ -23,7 +23,7 @@
   "author": "Rogier Spieker",
   "license": "MIT",
   "dependencies": {
-    "code": "^5.2.0",
-    "lab": "^15.4.1"
+    "code": "^5.2.4",
+    "lab": "^18.0.0"
   }
 }
