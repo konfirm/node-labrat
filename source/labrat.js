@@ -1,6 +1,7 @@
 const fs = require('fs');
 const Lab = require('lab')
 const code = require('code');
+const tlEach = require('template-literal-each');
 const lab = Lab.script();
 const map = new WeakMap();
 
@@ -88,8 +89,30 @@ class LabRat {
 		return require(`${path}/${module}`);
 	}
 
+	/**
+	 * Run a single test using a Promise to mimic older Lab behavor
+	 * 
+	 * @param string  title 
+	 * @param funtion test 
+	 */
 	testRunner(title, test) {
 		lab.it(title, () => new Promise((resolve) => test(resolve)));
+	}
+
+	/**
+	 * Implementation of a markdown-table processor to repeatedly run the same
+	 * test on many slight variations
+
+	 * @param  {...any} args 
+	 */
+	each(...args) {
+		const traverse = tlEach(...args);
+
+		return (description, test) => traverse((record) => {
+			const title = description.replace(/\$(\w+)/g, (_, name) => record[name]);
+
+			this.testRunner(title, (next) => test(record, next));
+		});
 	}
 }
 
@@ -105,6 +128,7 @@ labrat.globalize(code, 'expect');
 labrat.globalize({
 	source: labrat.source.bind(labrat),
 	it: labrat.testRunner.bind(labrat),
-}, 'source', 'it');
+	each: labrat.each.bind(labrat),
+}, 'source', 'it', 'each');
 
 module.exports = labrat;

@@ -4,7 +4,7 @@
   "description": "Convenience wrapper to globalize Hapi lab and code (BDD syntax)",
   "main": "source/labrat.js",
   "scripts": {
-    "test": "./node_modules/.bin/lab -clr",
+    "test": "./node_modules/.bin/lab -vclr",
     "test-coverage-html": "./node_modules/.bin/lab -clr html -o report.html"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "code": "^5.2.4",
-    "lab": "^18.0.0"
+    "lab": "^18.0.0",
+    "template-literal-each": "^1.0.2"
   }
 }
