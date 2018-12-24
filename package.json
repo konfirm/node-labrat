@@ -1,6 +1,6 @@
 {
   "name": "@konfirm/labrat",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Convenience wrapper to globalize Hapi lab and code (BDD syntax)",
   "main": "source/labrat.js",
   "scripts": {
