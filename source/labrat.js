@@ -1,6 +1,6 @@
 const fs = require('fs');
-const Lab = require('lab')
-const code = require('code');
+const Lab = require('@hapi/lab')
+const code = require('@hapi/code');
 const tlEach = require('template-literal-each');
 const lab = Lab.script();
 const map = new WeakMap();
