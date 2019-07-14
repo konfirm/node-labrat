@@ -24,7 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/code": "^5.3.1",
-    "@hapi/lab": "^19.0.1",
-    "template-literal-each": "^1.0.4"
+    "@hapi/lab": "^19.1.0",
+    "template-literal-each": "^1.0.6"
   }
 }
