@@ -23,8 +23,8 @@
   "author": "Rogier Spieker",
   "license": "MIT",
   "dependencies": {
-    "@hapi/code": "^5.3.1",
-    "@hapi/lab": "^19.1.0",
+    "@hapi/code": "^6.0.0",
+    "@hapi/lab": "^20.2.1",
     "template-literal-each": "^1.0.6"
   }
 }
